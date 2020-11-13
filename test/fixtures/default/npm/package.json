@@ -1,0 +1,9 @@
+{
+  "name": "npm",
+  "version": "1.0.0",
+  "main": "./main.js",
+  "style": "./style.css",
+  "dependencies": {
+    "jquery": "~1.7.2"
+  }
+}
