@@ -148,6 +148,10 @@ module Sprockets
   register_transformer 'application/ecmascript-6', 'application/javascript', BabelProcessor
   register_preprocessor 'application/ecmascript-6', DirectiveProcessor.new(comments: ["//", ["/*", "*/"]])
 
+  # I made this
+  require 'sprockets/semicolons_be_silly_processor'
+  register_bundle_processor 'application/javascript', SemicolonsBeSillyProcessor
+
   # Mmm, CoffeeScript
   require 'sprockets/coffee_script_processor'
   register_mime_type 'text/coffeescript', extensions: ['.coffee', '.js.coffee']
